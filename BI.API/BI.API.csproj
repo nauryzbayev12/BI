@@ -14,7 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BI.Database\BI.Database.csproj" />
     <ProjectReference Include="..\BI.Infrastructure\BI.Infrastructure.csproj" />
   </ItemGroup>
 

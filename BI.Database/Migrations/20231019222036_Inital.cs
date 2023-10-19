@@ -187,7 +187,7 @@ namespace BI.Database.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "38815E40-2E91-4033-849F-1202B5A319B8", 0, "7bc2055e-a359-4cc6-b5c1-e0b6aae52b2e", "user@bi.kz", true, false, null, "USER@BI.KZ", "USER", null, "+77071281494", true, "00000000-0000-0000-0000-000000000000", false, "user" });
+                values: new object[] { "38815E40-2E91-4033-849F-1202B5A319B8", 0, "257b9b0d-b2a0-4c6a-b911-b067774ad13e", "user@bi.kz", true, false, null, "USER@BI.KZ", "USER", "AQAAAAIAAYagAAAAECbvWiOezW82s9xggldJ5/48xwzxS/lT1vnOBOTOVnhhAcWJZXrvMyo6HpjfoArB2A==", "+77071281494", true, "00000000-0000-0000-0000-000000000000", false, "user" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUserRoles",
@@ -199,9 +199,9 @@ namespace BI.Database.Migrations
                 columns: new[] { "Id", "Created", "Name", "UserId" },
                 values: new object[,]
                 {
-                    { 1, new DateTime(2023, 10, 19, 22, 12, 46, 913, DateTimeKind.Utc).AddTicks(303), "BI HOME", "38815E40-2E91-4033-849F-1202B5A319B8" },
-                    { 2, new DateTime(2023, 10, 19, 22, 12, 46, 913, DateTimeKind.Utc).AddTicks(307), "BI SPORT", "38815E40-2E91-4033-849F-1202B5A319B8" },
-                    { 3, new DateTime(2023, 10, 19, 22, 12, 46, 913, DateTimeKind.Utc).AddTicks(308), "BI AUYL", "38815E40-2E91-4033-849F-1202B5A319B8" }
+                    { 1, new DateTime(2023, 10, 19, 22, 20, 36, 802, DateTimeKind.Utc).AddTicks(295), "BI HOME", "38815E40-2E91-4033-849F-1202B5A319B8" },
+                    { 2, new DateTime(2023, 10, 19, 22, 20, 36, 802, DateTimeKind.Utc).AddTicks(300), "BI SPORT", "38815E40-2E91-4033-849F-1202B5A319B8" },
+                    { 3, new DateTime(2023, 10, 19, 22, 20, 36, 802, DateTimeKind.Utc).AddTicks(301), "BI AUYL", "38815E40-2E91-4033-849F-1202B5A319B8" }
                 });
 
             migrationBuilder.CreateIndex(

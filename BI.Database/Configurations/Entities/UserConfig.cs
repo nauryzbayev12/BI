@@ -1,4 +1,5 @@
 ﻿using BI.Core;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -12,12 +13,12 @@ namespace BI.Database.Configurations.Entities
     public class UserConfig : IEntityTypeConfiguration<ApplicationUser>
     {
         private const string userId = "38815E40-2E91-4033-849F-1202B5A319B8";
-          
+
         public void Configure(EntityTypeBuilder<ApplicationUser> builder)
         {
-            builder.HasData(
+            var passHash = new PasswordHasher<ApplicationUser>();
 
-            new ApplicationUser
+            var user = new ApplicationUser
             {
                 Id = userId,
                 UserName = "user",
@@ -29,8 +30,12 @@ namespace BI.Database.Configurations.Entities
                 PhoneNumberConfirmed = true,
                 SecurityStamp = new Guid().ToString("D"),
 
-            }
-            );
+            };
+            user.PasswordHash = passHash.HashPassword(user, "Admin123!");
+
+            builder.HasData(user);
         }
+
+        
     }
 }
