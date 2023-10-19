@@ -17,9 +17,11 @@ namespace BI.Database.DatabaseContexts
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+
             builder.ApplyConfiguration(new RoleConfiguration());
             builder.ApplyConfiguration(new UserConfig());
             builder.ApplyConfiguration(new UsersWithRolesConfig());
+
             builder.ApplyConfiguration(new ProjectConfig());
 
         }

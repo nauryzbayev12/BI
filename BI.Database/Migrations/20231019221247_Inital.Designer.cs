@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace BI.Database.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20231019213217_Inital")]
+    [Migration("20231019221247_Inital")]
     partial class Inital
     {
         /// <inheritdoc />
@@ -87,6 +87,24 @@ namespace BI.Database.Migrations
                         .HasDatabaseName("UserNameIndex");
 
                     b.ToTable("AspNetUsers", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "38815E40-2E91-4033-849F-1202B5A319B8",
+                            AccessFailedCount = 0,
+                            ConcurrencyStamp = "7bc2055e-a359-4cc6-b5c1-e0b6aae52b2e",
+                            Email = "user@bi.kz",
+                            EmailConfirmed = true,
+                            LockoutEnabled = false,
+                            NormalizedEmail = "USER@BI.KZ",
+                            NormalizedUserName = "USER",
+                            PhoneNumber = "+77071281494",
+                            PhoneNumberConfirmed = true,
+                            SecurityStamp = "00000000-0000-0000-0000-000000000000",
+                            TwoFactorEnabled = false,
+                            UserName = "user"
+                        });
                 });
 
             modelBuilder.Entity("BI.Core.Project", b =>
@@ -116,21 +134,21 @@ namespace BI.Database.Migrations
                         new
                         {
                             Id = 1,
-                            Created = new DateTime(2023, 10, 20, 2, 32, 17, 452, DateTimeKind.Local).AddTicks(463),
+                            Created = new DateTime(2023, 10, 19, 22, 12, 46, 913, DateTimeKind.Utc).AddTicks(303),
                             Name = "BI HOME",
                             UserId = "38815E40-2E91-4033-849F-1202B5A319B8"
                         },
                         new
                         {
                             Id = 2,
-                            Created = new DateTime(2023, 10, 20, 2, 32, 17, 452, DateTimeKind.Local).AddTicks(475),
+                            Created = new DateTime(2023, 10, 19, 22, 12, 46, 913, DateTimeKind.Utc).AddTicks(307),
                             Name = "BI SPORT",
                             UserId = "38815E40-2E91-4033-849F-1202B5A319B8"
                         },
                         new
                         {
                             Id = 3,
-                            Created = new DateTime(2023, 10, 20, 2, 32, 17, 452, DateTimeKind.Local).AddTicks(476),
+                            Created = new DateTime(2023, 10, 19, 22, 12, 46, 913, DateTimeKind.Utc).AddTicks(308),
                             Name = "BI AUYL",
                             UserId = "38815E40-2E91-4033-849F-1202B5A319B8"
                         });

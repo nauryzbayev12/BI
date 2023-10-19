@@ -15,7 +15,9 @@ namespace BI.Database.Configurations.Entities
           
         public void Configure(EntityTypeBuilder<ApplicationUser> builder)
         {
-            var admin = new ApplicationUser
+            builder.HasData(
+
+            new ApplicationUser
             {
                 Id = userId,
                 UserName = "user",
@@ -26,8 +28,9 @@ namespace BI.Database.Configurations.Entities
                 EmailConfirmed = true,
                 PhoneNumberConfirmed = true,
                 SecurityStamp = new Guid().ToString("D"),
-               
-            };
+
+            }
+            );
         }
     }
 }

@@ -21,24 +21,27 @@ namespace BI.Database.Configurations.Entities
                {
                    Id = 1 ,
                    Name = "BI HOME",
-                   Created = DateTime.Now , 
-                   UserId = userId
+                   Created = DateTime.UtcNow , 
+                   UserId = userId 
                },
                 new Project
                 {
                     Id = 2,
                     Name = "BI SPORT",
-                    Created = DateTime.Now,
+                    Created = DateTime.UtcNow ,
                     UserId = userId
                 },
                  new Project
                  {
                      Id = 3 ,
                      Name = "BI AUYL",
-                     Created = DateTime.Now,
+                     Created = DateTime.UtcNow ,
                      UserId = userId
                  }
            ) ;
+            
+          
+
         }
     }
 }
