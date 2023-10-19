@@ -16,4 +16,8 @@
     <ProjectReference Include="..\BI.Infrastructure\BI.Infrastructure.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="logs\" />
+  </ItemGroup>
+
 </Project>

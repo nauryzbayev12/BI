@@ -92,7 +92,8 @@ namespace BI.API
 
             app.UseResponseCaching();
             app.UseHttpCacheHeaders();
-            app.UseIpRateLimiting();
+            
+            // app.UseIpRateLimiting();
 
             app.UseRouting();
 
