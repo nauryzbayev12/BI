@@ -1,8 +1,7 @@
-using AspNetCoreRateLimit;
-using BI.Core.Repository;
 using BI.Database.DatabaseContexts;
 using BI.Domain.IRepository;
 using BI.Domain.IServices;
+using BI.Infrastructure.Repository;
 using BI.Infrastructure.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -50,8 +49,10 @@ namespace BI.API
 
             services.ConfigureAutoMapper();
 
-            services.AddTransient<IUnitOfWork, UnitOfWork>();
+           
             services.AddScoped<IAuthManager, AuthManager>();
+            services.AddTransient<IProjectService, ProjectService>();
+
 
             services.ConfigureSwaggerDoc();
 

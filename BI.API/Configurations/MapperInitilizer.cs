@@ -8,9 +8,9 @@ namespace BI.API.Configurations
     {
         public MapperInitilizer()
         {
-            CreateMap<Project, HotelDTO>().ReverseMap();
-            CreateMap<Project, CreateHotelDTO>().ReverseMap();
-            CreateMap<Project, UpdateHotelDTO>().ReverseMap();
+            CreateMap<Project, ProjectDTO>().ReverseMap();
+            CreateMap<Project, CreateProjectDTO>().ReverseMap();
+            CreateMap<Project, UpdateProjectDTO>().ReverseMap();
             CreateMap<ApplicationUser, UserDTO>().ReverseMap();
         }
     }
