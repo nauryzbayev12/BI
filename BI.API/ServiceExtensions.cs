@@ -36,7 +36,7 @@ namespace BI.API
         public static void ConfigureJWT(this IServiceCollection services, IConfiguration Configuration)
         {
             var jwtSettings = Configuration.GetSection("Jwt");
-            var key = Environment.GetEnvironmentVariable("KEY");
+            var key = "Rather_very_long_key"; //Environment.GetEnvironmentVariable("KEY");
 
             services.AddAuthentication(o =>
             {
@@ -44,7 +44,7 @@ namespace BI.API
                 o.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             })
             .AddJwtBearer(o =>
-            {  
+            {     
                 o.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuer = true,
