@@ -44,7 +44,7 @@ namespace BI.API
                 o.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
             })
             .AddJwtBearer(o =>
-            {
+            {  
                 o.TokenValidationParameters = new TokenValidationParameters
                 {
                     ValidateIssuer = true,

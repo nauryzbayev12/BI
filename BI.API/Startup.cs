@@ -26,9 +26,8 @@ namespace BI.API
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddDbContext<DatabaseContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("sqlConnection"))
-            );
+            services.AddDbContext<DatabaseContext>(options => options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection"), b => b.MigrationsAssembly("BI.Database")));
+
 
             services.AddMemoryCache();
 
