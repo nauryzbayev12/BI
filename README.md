@@ -4,27 +4,29 @@
 
 ## Инструкция по запуску проекта
 
+Первое скачайте проект
+
 Перейдите в директорию :
-##  cd \BI\BI.API.
+cd \BI\BI.API.
 Выполните миграцию с помощью следующей команды (в проекте уже есть миграция с конфигурациями):
-## dotnet ef database update --context DatabaseContext
+dotnet ef database update --context DatabaseContext
 
 ## Создание миграции
 Перейдите в директорию 
-## cd C:\BI
+cd C:\BI
 Создайте миграцию с помощью следующей команды:  
-## dotnet ef migrations add Initial -p BI.Database --startup-project BI.API --context DatabaseContext
+dotnet ef migrations add Initial -p BI.Database --startup-project BI.API --context DatabaseContext
 
 
 ## Доступ к Swagger
 Swagger-документация доступна по следующему адресу: 
-## https://localhost:44379/swagger
+https://localhost:44379/swagger
 
 Данные для аутентификации
 Для доступа к API и аутентификации используйте следующие данные:
 
 URL для входа: 
-## https://localhost:44379/api/Account/login
+https://localhost:44379/api/Account/login
 
 JSON для аутентификации:
 
