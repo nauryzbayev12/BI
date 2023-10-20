@@ -27,6 +27,9 @@ JSON для аутентификации:
   "email": "user@bi.kz",
   "password": "Admin123!"
 }
+![Снимок экрана (1908)](https://github.com/nauryzbayev12/BI/assets/128095819/d1d3fb61-8553-416e-b596-58872ed92ffc)
+
+
 
 ## Создание миграции
 Перейдите в директорию 
