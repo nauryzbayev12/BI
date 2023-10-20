@@ -34,6 +34,8 @@ JSON для аутентификации:
 ## Пример использование токена (Не забываем писать bearer) :
 Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1L
 
+![Uploading Снимок экрана (1909).png…]()
+
 
 
 
