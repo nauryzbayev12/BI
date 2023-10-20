@@ -35,7 +35,7 @@ namespace BI.Infrastructure.Services
         private JwtSecurityToken GenerateTokenOptions(SigningCredentials signingCredentials, List<Claim> claims)
         {
             var jwtSettings = _configuration.GetSection("Jwt");
-            var expiration = DateTime.Now.AddMinutes(Convert.ToDouble(
+            var expiration = DateTime.Now.AddHours(Convert.ToDouble(
                 jwtSettings.GetSection("lifetime").Value));
 
             var token = new JwtSecurityToken(

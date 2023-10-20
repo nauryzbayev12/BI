@@ -90,8 +90,8 @@ namespace BI.API
 
             app.UseCors("AllowAll");
 
-            app.UseResponseCaching();
-            app.UseHttpCacheHeaders();
+            //app.UseResponseCaching();
+            //app.UseHttpCacheHeaders();
             
             // app.UseIpRateLimiting();
 

@@ -24,9 +24,19 @@ namespace BI.Infrastructure.Repository
         }
 
 
-        public async Task<IEnumerable<ProjectDTO>> GetProjects()
+        public async Task<IEnumerable<ProjectDTO>> GetProjects(DateTime? from, DateTime? to)
         {
-            var projects = await _context.Projects.ToListAsync();
+            var projects =  await _context.Projects.Include(s => s.ApplicationUser).ToListAsync();
+
+            if (from != null) 
+            {
+                projects = projects.Where(s => s.Created >= from).ToList();
+            }
+            if (to != null)
+            {
+                projects = projects.Where(s => s.Created <= to).ToList();
+            }
+
             return _mapper.Map<IEnumerable<ProjectDTO>>(projects);
         }
 

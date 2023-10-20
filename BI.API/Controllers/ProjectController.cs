@@ -25,11 +25,11 @@ namespace BI.API
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetProjects()
+        public async Task<IActionResult> GetProjects(DateTime? from , DateTime? to)
         {
             try
             {
-                var projects = await _projectService.GetProjects();
+                var projects = await _projectService.GetProjects(from , to);
                 return Ok(projects);
             }
             catch (EntityNotFoundException ex)
