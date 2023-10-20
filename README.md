@@ -11,13 +11,6 @@ cd \BI\BI.API.
 Выполните миграцию с помощью следующей команды (в проекте уже есть миграция с конфигурациями):
 dotnet ef database update --context DatabaseContext
 
-## Создание миграции
-Перейдите в директорию 
-cd C:\BI
-Создайте миграцию с помощью следующей команды:  
-dotnet ef migrations add Initial -p BI.Database --startup-project BI.API --context DatabaseContext
-
-
 ## Доступ к Swagger
 Swagger-документация доступна по следующему адресу: 
 https://localhost:44379/swagger
@@ -35,3 +28,8 @@ JSON для аутентификации:
   "password": "Admin123!"
 }
 
+## Создание миграции
+Перейдите в директорию 
+cd C:\BI
+Создайте миграцию с помощью следующей команды:  
+dotnet ef migrations add Initial -p BI.Database --startup-project BI.API --context DatabaseContext
