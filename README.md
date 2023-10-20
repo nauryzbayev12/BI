@@ -27,13 +27,14 @@ JSON для аутентификации:
   "email": "user@bi.kz",
   "password": "Admin123!"
 }
+![Снимок экрана (1908)](https://github.com/nauryzbayev12/BI/assets/128095819/8299432f-f6f8-4954-a766-38c65ab8bdef)
 
 
 
 ## Пример использование токена (Не забываем писать bearer) :
 Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1L
 
-![Uploading Снимок экрана (1909).png…]()
+
 
 
 
