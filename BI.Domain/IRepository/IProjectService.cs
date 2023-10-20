@@ -10,6 +10,7 @@ namespace BI.Domain.IRepository
     public interface IProjectService
     {
         Task<IEnumerable<ProjectDTO>> GetProjects(DateTime? from, DateTime? to);
+        Task<IEnumerable<YearlyProjectsDTO>> GetProjectsByYear();
         Task<ProjectDTO> GetProject(int id);
         Task<ProjectDTO> CreateProject(CreateProjectDTO createProjectDTO);
         Task<bool> UpdateProject(int id, UpdateProjectDTO updateProjectDTO);

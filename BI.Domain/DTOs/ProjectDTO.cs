@@ -20,10 +20,6 @@ namespace BI.Domain.DTOs
         /// </summary>
         public DateTime Created { get; set; }
 
-        /// <summary>
-        /// ID пользователя 
-        /// </summary>  
-        public string UserId { get; set; }
        
     }
 
@@ -47,6 +43,13 @@ namespace BI.Domain.DTOs
 
 
     }
+
+    public class YearlyProjectsDTO
+    {
+        public int Year { get; set; }
+        public int ProjectCount { get; set; }
+    }
+
 
 
 

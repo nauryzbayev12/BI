@@ -24,6 +24,22 @@ namespace BI.Infrastructure.Repository
         }
 
 
+        public async Task<IEnumerable<YearlyProjectsDTO>> GetProjectsByYear()
+        {
+            var projectsByYear = await _context.Projects
+                .GroupBy(p => p.Created.Year)
+                .Select(g => new YearlyProjectsDTO
+                {
+                    Year = g.Key,
+                    ProjectCount =  g.Count()
+                })
+                .ToListAsync();
+
+            return projectsByYear;
+        }
+
+
+
         public async Task<IEnumerable<ProjectDTO>> GetProjects(DateTime? from, DateTime? to)
         {
             var projects =  await _context.Projects.Include(s => s.ApplicationUser).ToListAsync();

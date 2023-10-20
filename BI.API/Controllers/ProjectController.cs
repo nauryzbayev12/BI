@@ -40,7 +40,23 @@ namespace BI.API
             {
                 return StatusCode(500, "An error occurred while processing your request.");
             }
+        
         }
+
+        [HttpGet("projects-by-year")]
+        public async Task<IActionResult> GetProjectsByYear()
+        {
+            try
+            {
+                var projectsByYear = await _projectService.GetProjectsByYear();
+                return Ok(projectsByYear);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, "An error occurred while processing your request."); 
+            }
+        }
+
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetProject(int id)
