@@ -1,4 +1,4 @@
-# Проект: Управление проектарми данными с использованием ASP.NET Core, Entity Framework Core, PostgreSQL, AutoMapper, ASP.NET Core Identity, Serilog и Swagger
+# Проект: Управление проектарми
 
 Данный проект представляет собой веб-приложение, разработанное с использованием технологий ASP.NET Core, Entity Framework Core, PostgreSQL, AutoMapper, ASP.NET Core Identity, Serilog и Swagger.
 
